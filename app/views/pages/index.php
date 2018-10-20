@@ -1,4 +1,4 @@
-  <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/header.php'; ?>
     <h3><?php //echo $data['title']; ?></h3>
 <div class="content">
  <div class="container">
