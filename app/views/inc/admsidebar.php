@@ -33,6 +33,7 @@
           </ul>
         </li>
         <li><a href="<?php   echo URLROOT ?>/admins/categories"><i class="fa fa-folder"></i> <span>Categories</span></a></li>
+         <li><a href="<?php   echo URLROOT ?>/admins/messages"><i class="fa fa-envelope"></i> <span>Messages</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

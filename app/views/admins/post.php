@@ -59,11 +59,11 @@
                             </a>
                         </td>
                         <td><?php echo $posts->title; ?></td>
-                        <td><?php echo $posts->title; ?></td>
+                        <td><?php echo $posts->cat_title; ?></td>
                         <?php if ($posts->published_at == 'NULL') { ?> 
                         <td><abbr title="Draft"><?php echo 'Draft'; ?></abbr> | <span class="label label-default">Draft</span></td>
                         <?php } else { ?>
-                        <td><abbr title="<?php echo $posts->published_at; ?>"><?php echo $posts->published_at; ?></abbr> | <span class="label label-success">Schedule</span></td>  
+                        <td><abbr title="<?php echo $posts->published_at; ?>"><?php echo $posts->published_at; ?></abbr> | <span class="label label-success">Published</span></td>  
                         <?php } ?>                      
                       </tr>
                     <?php endforeach; ?>

@@ -261,4 +261,25 @@ class Admins extends Controller
             redirect('admins/post');
         }
     }
+
+    public function messages()
+    {
+        $msgs = $this->adminModel->getMsgs();
+
+        $data = [
+        'msgs' => $msgs
+        ];
+
+        $this->view('admins/messages', $data);
+    }
+
+    public function deletemsg($id)
+    {
+      // Get posts
+        
+        if ($this->adminModel->deletemsg($id)) {
+            flash('post_message', 'Message deleted');
+            redirect('admins/messages');
+        }
+    }
 }

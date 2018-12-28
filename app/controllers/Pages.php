@@ -1,37 +1,42 @@
 <?php
-  class Pages extends Controller {
+class Pages extends Controller
+{
 
-    public function __construct(){
+    public function __construct()
+    {
 
-      $this->postModel = $this->model('Post');
-
+        $this->postModel = $this->model('Post');
     }
 
-    public function index(){
+    public function index()
+    {
 
-      $data = [
+        $data = [
         'title' => 'Joolzherbal'
-      ];
+        ];
 
-      $this->view('pages/index', $data);
+        $this->view('blogposts/index', $data);
     }
 
-    public function about(){
-      $data = [
+    public function about()
+    {
+        $data = [
         'title' => 'About Us'
-      ];
-      $this->view("pages/about",$data);
+        ];
+        $this->view("pages/about", $data);
     }
-    public function fullpost(){
-      $data = [
+    public function fullpost()
+    {
+        $data = [
         'title' => 'Full post'
-      ];
-      $this->view("pages/fullpost",$data);
+        ];
+        $this->view("pages/fullpost", $data);
     }
-    public function contact(){
-      $data = [
+    public function contact()
+    {
+        $data = [
         'title' => 'Contact'
-      ];
-      $this->view("pages/contact",$data);
+        ];
+        $this->view("pages/contact", $data);
     }
-  }
+}

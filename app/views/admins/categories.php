@@ -54,14 +54,14 @@
                                 <i class="fa fa-times"></i>
                             </a>
                         </td>
-                        <td><?php echo $cats->title; ?></td>
+                        <td><?php echo $cats->cat_title; ?></td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
               <!-- /.box-body -->
-              <div class="box-footer clearfix">
+             <!--  <div class="box-footer clearfix">
                   <ul class="pagination pagination-sm no-margin pull-left">
                     <li><a href="#">«</a></li>
                     <li><a href="#">1</a></li>
@@ -69,7 +69,7 @@
                     <li><a href="#">3</a></li>
                     <li><a href="#">»</a></li>
                   </ul>
-                </div>
+                </div> -->
             </div>
             <!-- /.box -->
           </div>

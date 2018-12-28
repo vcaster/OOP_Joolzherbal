@@ -1,23 +1,23 @@
 <div class="header">
      <div class="container">
           <div class="logo">
-              <a href="<?php echo URLROOT ?>"><img src="<?php echo URLROOT ?>/images/logo.jpg" title="" /></a>
+              <a href="<?php echo URLROOT ?>"><img src="<?php echo URLROOT ?>/images/logo.jpg" title="" height='150' /></a>
           </div>
              <!---start-top-nav---->
              <div class="top-menu">
                  <div class="search">
-                     <form>
-                     <input type="text" placeholder="" required="">
-                     <input type="submit" value=""/>
-                     </form>
+                     <form  method="post" action="<?php echo URLROOT ?>/blogposts/index">
+                     <input type="text" name="search" placeholder="Search for a blog...">
+                     <input type="Submit" name="Submit" value=""/>
+                     
                  </div>
                   <span class="menu"> </span>
                    <ul>
-                        <li class="active"><a href="<?php echo URLROOT ?>/index">HOME</a></li>
-                        <li><a href="<?php echo URLROOT ?>/blogpost/about">ABOUT</a></li>
-                        <li><a href="<?php echo URLROOT ?>/blogpost/contact">CONTACT</a></li>
-            <li><a href="<?php echo URLROOT ?>/users/register">REGISTER</a></li>
-            <li><a href="<?php echo URLROOT ?>/users/login">LOGIN</a></li>
+                        <li class="active"><a href="<?php echo URLROOT ?>/blogposts/index">HOME</a></li>
+                        <li><a href="<?php echo URLROOT ?>/blogposts/about">ABOUT</a></li>
+                        <li><a href="<?php echo URLROOT ?>/blogposts/contact">CONTACT</a></li>
+           <!--  <li><a href="<?php //echo URLROOT ?>/users/register">REGISTER</a></li>
+            <li><a href="<?php //echo URLROOT ?>/users/login">LOGIN</a></li> -->
                         <div class="clearfix"> </div>
                  </ul>
              </div>

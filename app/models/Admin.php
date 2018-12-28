@@ -48,7 +48,17 @@ class Admin
     public function getPosts()
     {
         $status = '0';
-        $this->db->query(' SELECT * FROM posts WHERE is_aval= :status ORDER BY id DESC; ');
+        $this->db->query(' SELECT * FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE posts.is_aval= :status ORDER BY posts.id DESC;  ');
+        $this->db->bind(':status', $status);
+        $results = $this->db->resultSet();
+
+        return $results;
+    }
+
+    public function getMsgs()
+    {
+        $status = '0';
+        $this->db->query(' SELECT * FROM messages WHERE is_read= :status ORDER BY msg_id DESC;  ');
         $this->db->bind(':status', $status);
         $results = $this->db->resultSet();
 
@@ -68,7 +78,7 @@ class Admin
     public function getCat()
     {
         $status = '0';
-        $this->db->query(' SELECT * FROM categories WHERE is_aval= :status ORDER BY id DESC; ');
+        $this->db->query(' SELECT * FROM categories WHERE is_aval= :status ORDER BY cat_id DESC; ');
         $this->db->bind(':status', $status);
         $results = $this->db->resultSet();
 
@@ -92,7 +102,21 @@ class Admin
     public function deletecat($id)
     {
         $status = '1';
-        $this->db->query('UPDATE categories SET is_aval = :status WHERE ID=:id');
+        $this->db->query('UPDATE categories SET is_aval = :status WHERE cat_id=:id');
+        $this->db->bind(':id', $id);
+        $this->db->bind(':status', $status);
+        
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function deletemsg($id)
+    {
+        $status = '3';
+        $this->db->query('UPDATE messages SET is_read = :status WHERE msg_id=:id');
         $this->db->bind(':id', $id);
         $this->db->bind(':status', $status);
         

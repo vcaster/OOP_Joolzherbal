@@ -4,7 +4,15 @@
 // load helpers
   require_once 'helpers/url_helper.php';
   require_once 'helpers/session_helper.php';
+
   // Autoload Core Libraries
   spl_autoload_register(function ($className) {
     require_once 'libraries/' . $className . '.php';
   });
+
+  require_once 'libraries/parsedown/Parsedown.php';
+  require_once 'libraries/Carbon.php';
+   use Carbon\Carbon;
+
+  // require '../vendor/autoload.php';
+  //

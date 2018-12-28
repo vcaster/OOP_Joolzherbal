@@ -70,7 +70,7 @@
                     <?php foreach ($data['cats'] as $cats) :  ?>
                       <div class="radio">
                           <label>
-                            <input type="radio" name="cat" id="category-1" value="<?php echo $cats->id; ?>"> <?php echo $cats->title; ?>
+                            <input type="radio" name="cat" id="category-1" value="<?php echo $cats->cat_id; ?>"> <?php echo $cats->cat_title; ?>
                           </label>
                       </div>
                     <?php endforeach; ?>
