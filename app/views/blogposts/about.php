@@ -1,46 +1,73 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
   <h3><?php //echo $data['title']; ?></h3>
     <div class="about-content">
-    	 <div class="container">
-    		 <h2>Something About Me and Blogging</h2>
-    		 <div class="about-section">
-    			 <div class="about-grid">
-    				 <h3>WHY I STARTED THIS BLOG?</h3>
-    				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    				 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-    				 versions of Lorem Ipsum.</p>
-    				 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages
-    				 and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-    			 </div>
-    			 <div class="about-grid2">
-    				 <h3>WHY YOU SHOULD READ THIS BLOG?</h3>
-    				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    				 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-    				 versions of Lorem Ipsum.</p>
-    				 <ul>
-    					 <li><a href="#">Always free from repetition</a></li>
-    					 <li><a href="#">Vestibulum rhoncus nibh quis dui fermentum iaculis.</a></li>
-    					 <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-    					 <li><a href="#">In consequat dolor in lorem egestas ultrices.</a></li>
-    					 <li><a href="#">Ultrices rhoncus nibh quis dui.</a></li>
-    				 </ul>
-    			 </div>
-    			 <div class="who-iam">
-    				 <h3>WHO THE IAM?</h3>
-    				 <div class="man-info">
-    					 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-    				     <h4>Some facts about me.</h4>
-    					 <li>Nullam at turpis a orci pretium pharetra.</li>
-    					 <li>Curabitur tincidunt purus mollis facilisis placerat.</li>
-    					 <li>Mauris a nulla ac est tincidunt interdum.</li>
-    					 <li>Pellentesque vel enim nec urna imperdiet mollis.</li>
-    					 <li>Integer interdum risus et scelerisque volutpat.</li>
-    				 </div>
-    				 <div class="man-pic">
-    				 <img src="<?php echo URLROOT ?>/images/man.jpg" alt=""/>
-    				 </div>
+         <div class="container">
+             <!-- <h2>Something About Me and Blogging</h2> -->
+             <div class="about-section">
+                 <div class="about-grid">
+                     <h3>ABOUT JOOLZ HERBAL</h3>
+                     <p>Joolz Herbal is first a product of passion. 
+
+We are very keen on projecting the simplicity in nature.  At Joolz herbal we believe ‘Nature is simple’; Nature is ‘what you see is what you get’.
+
+We would say we are distinguished because of our personalized herbal remedies and solutions that meet client’s specific needs.  
+
+Also, we do not take hygiene for granted.  We are very mindful of the environment and condition in which we produce our medicine. 
+
+We are very much confident about our work and medicine.  
+
+We have been involved in quite a number of research projects. We have tested herbs in the laboratory and seen how they work. 
+
+In 2014, CEO, Julia Osakuni was one of the four people who were selected on a World Bank project.  She cultivated edible and medicinal mushroom in the laboratory for a year. 
+
+At Joolz Herbal, we have a feedback record of at least 58 clients who after benefitting from our service, came back with a good report, saying ‘Thank You’ for the awesome result. 
+</p>
+                
+                 </div>
+                 <div class="about-grid2">
+                     <h3>WHY YOU SHOULD READ THIS BLOG?</h3>
+                     <p>I started this blog to reach out to the entire world, enlightening as many on what herbalism truly is and what it can do for them.
+
+In Africa, people still think herbalism is synonymous to the practice of voodoo, but this is not so.  Plants are a gift from God and there is so much in nature we are yet to explore. 
+ 
+Our desire is that you discover what the intake of pure herbs can do for you. 
+
+On this blog, you will get firsthand information from an expert who has a genuine connection with herbs and nature.  
+
+I will share with you my personal experience from the use of herbs. I will share how people’s lives have been changed, having been transformed from a place of pain to happiness from the use of herbal remedies from Jools herbal.
+
+You will learn to make herbal remedies by yourself with simple things from your kitchen. 
+
+
+My desire is to add value to your life and giving you all the knowledge you need about herbalism and its benefit; And that our eyes are open to all nature has in store for us.
+</p>
+                    
+                 </div>
+                 <div class="who-iam">
+                     <h3>WHO AM I?</h3>
+                     <div class="man-info">
+                         <p>My name is Julia Osakuni. 
+I am a lover of all things natural. I am a nature freak. The practice of herbalism brings me joy and the feedback from my clients gets me elated.<br/>
+
+My love for nature and herbalism began when I discovered its potency.<br/>
+
+I grew up as a sickly child and gave my parents some trouble. It is from this stand point that my interest in herbs and all things nature grew. I have personally learnt that when herbs heal, it heals completely and it is permanent. It makes one whole again; and the results it brings comes with no side effects.<br/>
+
+Scientists say ‘food is medicine and medicine is food’. <br/>
+
+God has made these plants not just for food but for medicine also.<br/>
+
+In the course of my career, I have been privileged to work with some of the best minds in herbalism.  I have been under the tutelage of experienced and certified professionals (botanists, mycologists and likes) who took me further into the knowledge of herbs.<br/> 
+
+I also shave certification in Microbiology and Business Administration.<br/>
+ </p>
+                        
+                     </div>
+                     <div class="man-pic">
+                     <!-- <img src="<?php //echo URLROOT ?>/images/man.jpg" alt=""/> -->
+                     </div>
              <script>
-		           $(document).ready(function() {
+                   $(document).ready(function() {
                  $(".content-right").hide();
                });
               </script>

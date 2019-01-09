@@ -42,15 +42,53 @@ class Blogposts extends Controller
                 $this->view('blogposts/index', $data);
             }
         } else {
-            $posts = $this->blogpostModel->getPosts();
+            if (isset($_GET['page'])) {
+                $page = $_GET['page'];
+            } else {
+                $page = 1;
+            }
+
+            if ($page == '' || $page == 1) {
+                $page1 = 0;
+            } else {
+                $page1 = ($page*5)-5;
+            }
+
+            $perpage = 5;
+            // $page = 1;
+            // $start =  ($page > 1) ? ($page * $perpage) - $perpage : 0;
+
+            $datas =[
+            'start' => $page1,
+            'perpage' => $perpage
+            ];
+
+            $posts = $this->blogpostModel->limitPost($datas);
             $side = $this->blogpostModel->getPosts();
             $cats = $this->blogpostModel->getCat();
+            $totalrows = $this->blogpostModel->RowsPost();
+            // $record_pages = $totalrows / $perpage;
+            // $record_pages = ceil($record_pages);
+            $prev =  $page - 1;
+            $next = $page + 1;
+            
 
             $data = [
             'posts' => $posts,
             'side' => $side,
-            'cats' => $cats
+            'cats' => $cats,
+            // 'start' => $start,
+            'perpage' => $perpage,
+            'page' => $page,
+            'totalrows' => $totalrows,
+            'prev' => $prev,
+            'next' =>$next
+            // 'record_pages' => $record_pages
+
             ];
+            // $sampl =['sss' => 4];
+            // $sample = ['exaple1' => $sampl];
+            // var_dump($sample);
 
             $this->view('blogposts/index', $data);
         }
@@ -81,6 +119,13 @@ class Blogposts extends Controller
         ];
         $this->view("blogposts/about", $data);
     }
+
+    public function data()
+    {
+        
+        $this->view("blogposts/data");
+    }
+
     public function fullpost($id)
     {
         $side = $this->blogpostModel->getPosts();
@@ -114,8 +159,8 @@ class Blogposts extends Controller
                 $this->view("blogposts/contact", $data);
             }
         }
-            $data = null;
-            $this->view("blogposts/contact", $data);
+        $data = null;
+        $this->view("blogposts/contact", $data);
     }
 
     public function error()

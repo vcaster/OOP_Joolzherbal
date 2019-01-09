@@ -70,7 +70,7 @@
                   </tbody>
                 </table>
               </div>
-              <!-- /.box-body -->
+              <!--  /.box-body 
               <div class="box-footer clearfix">
                   <ul class="pagination pagination-sm no-margin pull-left">
                     <li><a href="#">«</a></li>
@@ -79,7 +79,7 @@
                     <li><a href="#">3</a></li>
                     <li><a href="#">»</a></li>
                   </ul>
-                </div>
+                </div> -->
             </div>
             <!-- /.box -->
           </div>

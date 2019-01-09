@@ -10,12 +10,37 @@ class Blogpost
     public function getPosts()
     {
         $status = '0';
-        $this->db->query(' SELECT * FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE posts.is_aval= :status ORDER BY posts.id DESC; ');
+        $this->db->query(' SELECT * FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE posts.is_aval= :status ORDER BY posts.id DESC LIMIT 0,5; ');
         $this->db->bind(':status', $status);
         $results = $this->db->resultSet();
 
         return $results;
     }
+
+    public function limitPost($datas)
+    {
+        $status = '0';
+        $this->db->query(' SELECT * FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE posts.is_aval= :status ORDER BY posts.id DESC LIMIT :start, :perpage ');
+        $this->db->bind(':status', $status);
+        $this->db->bind(':start', $datas['start']);
+        $this->db->bind(':perpage', $datas['perpage']);
+        $results = $this->db->resultSet();
+
+        return $results;
+    }
+
+    public function RowsPost()
+    {
+        $status = '0';
+        $this->db->query(' SELECT posts.is_aval FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE posts.is_aval= :status ORDER BY posts.id DESC ');
+        $this->db->bind(':status', $status);
+        $row = $this->db->single();
+        $roww = $this->db->rowCount();
+
+        return $roww;
+    }
+
+
 
     public function getPostById($id)
     {
@@ -62,7 +87,7 @@ class Blogpost
     public function searchResults($data)
     {
         $status = '0';
-        $this->db->query('SELECT * FROM posts WHERE title LIKE :data OR body LIKE :data AND is_aval= :status ');
+        $this->db->query('SELECT * FROM categories INNER JOIN  posts ON posts.category_id=categories.cat_id WHERE title LIKE :data OR body LIKE :data AND posts.is_aval= :status ');
         $this->db->bind(':data', $data['search']);
         $this->db->bind(':status', $status);
         $results = $this->db->resultSet();
